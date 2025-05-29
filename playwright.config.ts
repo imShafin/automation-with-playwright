@@ -36,7 +36,7 @@ export default defineConfig({
   projects: [
     {
       name: 'setup',
-      testMatch: '*/setup/.setup.ts',
+      testMatch: 'tests/setup/auth.setup.ts',
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1920, height: 1080 }

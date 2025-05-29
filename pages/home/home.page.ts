@@ -6,7 +6,7 @@ export class HomePage extends BasePage {
 
     constructor(page: Page) {
         super(page);
-        this.dashboard = page.getByRole('button', { name: 'Applications' });
+      //  this.dashboard = page.getByRole('button', { name: 'Applications' });
     }
 
     async navigate(url: string) {

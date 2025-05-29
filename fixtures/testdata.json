@@ -1,6 +1,7 @@
 {
+    "baseurl": "http://localhost:7891",
     "validUser": {
-        "baseurl": "http://localhost:7892/login",
+        "loginUrl": "http://localhost:7891/login",
         "email": "tester1@gmail.com",
         "password": "12345"
     }

@@ -11,12 +11,10 @@ setup('login', async ({ page }) => {
     testdata["validUser"]["email"], 
     testdata["validUser"]["password"]
   );
-  const authPath = path.join(process.cwd(), 'fixtures', 'auth', 'auth.json');
-  await fs.mkdir(path.dirname(authPath), { recursive: true });
-  
-  //await page.waitForURL(/);
 
-  await page.context().storageState({ path: authPath });
+    // Wait for the final URL to ensure that the cookies are actually set.
+  await page.waitForURL(testdata['baseurl']);
+  await page.context().storageState({ path: 'fixtures/auth/auth.json' });
   await page.pause();
 });
 

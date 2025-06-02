@@ -6,12 +6,14 @@ export class HomePage extends BasePage {
     readonly applications: Locator;
     readonly investmentClearance: Locator;
     readonly investmentClearanceView: Locator;
+    readonly nextButton: Locator;
 
     constructor(page: Page) {
         super(page);
         this.applications = page.getByRole('button', { name: 'Applications' });
         this.investmentClearance = page.getByRole('button', { name: 'Investment Clearance' });
         this.investmentClearanceView = page.getByRole('link', { name: 'VIEW' });
+        this.nextButton = page.getByRole('button', { name: 'Next button. Click to go to' });
     }
 
     async navigate(url: string) {
@@ -19,7 +21,7 @@ export class HomePage extends BasePage {
         await this.applications.click();
         await this.investmentClearance.click();
         await this.investmentClearanceView.click();
-        //await this.ICSOP.click();('button', { name: 'Investment Clearance' }).getByRole('link').click();
+        await this.nextButton.click();
     }
 
     async operations() {

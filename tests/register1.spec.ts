@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { RegisterPage } from '../pages/register1/register.page.ts';
-import testData from '../fixtures/testData.json';
+import testData from '../fixtures/testData';
 
 test('test registration with male user', async ({ page }) => {
   const registerPage = new RegisterPage(page);

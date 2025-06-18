@@ -16,12 +16,5 @@ test.describe('Registration Tests', () => {
             testdata.registration.user,
             testdata.registration.files
         );
-        await registrationPage.submitRegistration();
-        //await expect(registrationPage.page).toHaveURL();
     });
-
-    // test('should validate required fields', async () => {
-    //     await registrationPage.submitRegistration();
-    //     //await expect(registrationPage.nameInput).toHaveClass(/error/);
-    // });
 });

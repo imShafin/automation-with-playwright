@@ -29,7 +29,8 @@ export class SignUpPage extends BasePage {
     // Company Information
     readonly companyTypeDropdown: Locator;
     readonly companyNameInput: Locator;
-    
+    readonly companyCountryNameDropdown: Locator;
+
     // Document Uploads
     readonly moaUpload: Locator;
     readonly landLeaseUpload: Locator;
@@ -81,6 +82,7 @@ export class SignUpPage extends BasePage {
         // Company Information
         this.companyTypeDropdown = page.getByText('Select a company typeRemove');
         this.companyNameInput = page.getByRole('textbox', { name: 'Company Name: *' });
+        this.companyCountryNameDropdown = page.getByText('Select a countryRemove item');
         
         // Document Uploads
         this.moaUpload = page.getByRole('link', { name: 'browse Browse to attach file for Copy of MOA:' });
@@ -174,10 +176,13 @@ export class SignUpPage extends BasePage {
     async fillCompanyInformation(data: {
         companyType: string;
         companyName: string;
+        companyCountryName: string;
     }) {
         await this.companyTypeDropdown.click();
         await this.page.getByRole('option', { name: data.companyType }).click();
         await this.companyNameInput.fill(data.companyName);
+        await this.companyCountryNameDropdown.click();
+        await this.page.getByRole('option', { name: data.companyCountryName }).click();
     }
 
     async uploadDocuments(documentPath: string, imagePath: string) {
@@ -242,7 +247,9 @@ export class SignUpPage extends BasePage {
         });
         await this.fillCompanyInformation({
             companyType: userData.companyType,
-            companyName: userData.companyName
+            companyName: userData.companyName,
+            companyCountryName: userData.companyCountryName
+
         });
         await this.uploadDocuments(fileData.documentPath, fileData.imagePath);
         await this.fillAccountInformation({

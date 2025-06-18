@@ -1,6 +1,6 @@
 import { test as setup, expect } from '@playwright/test';
-import { LoginPage } from '../../pages/login/login.page';
-import testdata from '../../fixtures/testdata.json';
+import { LoginPage } from '../../../pages/beza/login/login.page.ts';
+import testdata from '../../../fixtures/testdata.json';
 import fs from 'fs/promises';
 import path from 'path';
 

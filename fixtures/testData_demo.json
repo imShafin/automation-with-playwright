@@ -1,0 +1,26 @@
+{
+  "validUser": {
+    "loginUrl": "your_login_url",
+    "email": "your_email@example.com",
+    "password": "your_password"
+  },
+  "registration": {
+    "registerUrl": "https://demowebshop.tricentis.com/register",
+    "maleUser": {
+      "gender": "Male",
+      "firstName": "Shafin",
+      "lastName": "Izaz",
+      "email": "ims97@ail.com",
+      "password": "hhh111",
+      "confirmPassword": "hhh111"
+    },
+    "femaleUser": {
+      "gender": "Female",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "jane.doe@exe.com",
+      "password": "hhh111",
+      "confirmPassword": "hhh111"
+    }
+  }
+}

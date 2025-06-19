@@ -1,7 +1,7 @@
 // tests/registration.spec.ts
 import { test, expect } from '@playwright/test';
-import { SignUpPage } from '../pages/signup/signup.page';
-import testdata from '../fixtures/testdata.json';
+import { SignUpPage } from '../../pages/beza/signup/signup.page';
+import testdata from '../../fixtures/testdata.json';
 
 test.describe('Registration Tests', () => {
     let registrationPage: SignUpPage;

@@ -1,0 +1,27 @@
+{
+  "lmsCreation": {
+    "url": "http://192.168.1.125:31710/sops/444/create",
+    "application": {
+      "ezName": "Araihazar -2 Economic Zone",
+      "parentCompany": "gone ltd",
+      "establishmentDate": "22-Jun-2014",
+      "parentCompanyAddress": "gone@ltd.com",
+      "focalPoint1": {
+        "name": "peter",
+        "mobile": "0123456789",
+        "designation": "GM",
+        "email": "pta@gmail.com"
+      },
+      "leaseType": "Annual",
+      "productType": "Test: Orange, Lemon, Grapes",
+      "investmentAmount": "123456",
+      "investmentType": "Local",
+      "plotSize": "12345",
+      "proposedPlotSize": "12345",
+      "plotType": "Developed"
+    },
+    "files": {
+      "landCoordinates": "/home/shafin/Documents/practice/Automation/files/demo.pdf"
+    }
+  }
+}

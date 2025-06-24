@@ -8,7 +8,7 @@ test.describe('LMS Creation Tests', () => {
 
     test.beforeEach(async ({ page }) => {
         lmsCreationPage = new LmsCreationPage(page);
-        await lmsCreationPage.navigate(testdata['lmsCreation']['url']);
+        await lmsCreationPage.navigate(process.env.BASE_URL! + '/sops/444/create');
     });
 
     test('should create new SOP successfully', async () => {

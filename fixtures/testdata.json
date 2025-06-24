@@ -1,7 +1,5 @@
 {
-    "baseurl": "http://192.168.1.125:31710",
     "validUser": {
-        "loginUrl": "http://192.168.1.125:31710/login",
         "email": "test_lms_mis_1@beza.com",
         "password": "12345"
     }

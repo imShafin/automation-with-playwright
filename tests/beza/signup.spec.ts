@@ -8,13 +8,13 @@ test.describe('Registration Tests', () => {
 
     test.beforeEach(async ({ page }) => {
         registrationPage = new SignUpPage(page);
-        await registrationPage.navigate(testdata.registration.url);
+        await registrationPage.navigate(process.env.BASE_URL! + '/registration');
     });
 
     test('should complete registration successfully', async () => {
         await registrationPage.completeRegistration(
-            testdata.registration.user,
-            testdata.registration.files
+            testdata['user'],
+            testdata['files']
         );
     });
 });

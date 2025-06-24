@@ -1,7 +1,5 @@
 
 {
-    "registration": {
-    "url": "http://192.168.1.125:31710/registration",
     "user": {
       "name": "ssi",
       "type": "Local Investor",
@@ -26,8 +24,7 @@
       "confirmPassword": "hphphp"
     },
     "files": {
-      "documentPath": "/home/shafin/Documents/practice/Automation/files/demo.pdf",
-      "imagePath": "/home/shafin/Documents/practice/Automation/files/demo.png"
+      "documentPath": "files/demo.pdf",
+      "imagePath": "files/demo.png"
     }
-  }
 }

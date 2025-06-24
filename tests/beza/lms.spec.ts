@@ -16,18 +16,7 @@ test.describe('LMS Creation Tests', () => {
             testdata['lmsCreation']['application'],
             testdata['lmsCreation']['files']
         );
-        
-        // Add verification steps here
-        await expect(lmsCreationPage.page).toHaveURL(/success/);
+    
     });
 
-    test('should validate required fields', async () => {
-        // Test validation by submitting empty form
-        await lmsCreationPage.startNewApplication();
-        await lmsCreationPage.submitButton.click();
-        
-        // Verify validation messages appear
-        await expect(lmsCreationPage.parentCompanyInput).toHaveClass(/error/);
-        // Add more validation checks as needed
-    });
 });

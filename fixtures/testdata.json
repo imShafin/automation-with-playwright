@@ -1,41 +1,9 @@
 {
-    "baseurl": "http://localhost:7891",
+    "baseurl": "http://192.168.1.125:31710",
     "validUser": {
-        "loginUrl": "http://localhost:7891/login",
-        "email": "tester1@gmail.com",
+        "loginUrl": "http://192.168.1.125:31710/login",
+        "email": "test_lms_mis_1@beza.com",
         "password": "12345"
-    },
-    
-    "registration": {
-    "url": "http://localhost:7891/registration",
-    "user": {
-      "name": "ssi",
-      "type": "Local Investor",
-      "economicZone": "Government Owned Economic Zone",
-      "zoneName": "Shrihatta Economic Zone",
-      "nationality": "Bangladeshi",
-      "idType": "National ID",
-      "nationalId": "00000007757876",
-      "dob": "June 3,",
-      "designation": "owner",
-      "country": "Bangladesh",
-      "division": "Rajshahi",
-      "district": "Pabna",
-      "address": "3ghjkjeyjh",
-      "phoneCountry": "(AFG)",
-      "mobileNumber": "0987654",
-      "companyType": "Existing company",
-      "companyName": "shunni ltd",
-      "companyCountryName": "Bangladesh",
-      "email": "t@iayon.com",
-      "password": "hphphp",
-      "confirmPassword": "hphphp"
-    },
-    "files": {
-      "documentPath": "/home/shafin/Documents/practice/Automation/files/demo.pdf",
-      "imagePath": "/home/shafin/Documents/practice/Automation/files/demo.png"
     }
-  }
-
 }
 

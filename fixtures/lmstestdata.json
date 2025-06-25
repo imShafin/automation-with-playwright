@@ -1,6 +1,5 @@
 {
   "lmsCreation": {
-    "url": "http://192.168.1.125:31710/sops/444/create",
     "application": {
       "ezName": "Araihazar -2 Economic Zone",
       "parentCompany": "gone ltd",
@@ -21,7 +20,7 @@
       "plotType": "Developed"
     },
     "files": {
-      "landCoordinates": "/home/shafin/Documents/practice/Automation/files/demo.pdf"
+      "landCoordinates": "files/demo.pdf"
     }
   }
 }

@@ -1,15 +1,14 @@
 
 {
-    "registration": {
-    "url": "http://192.168.1.125:31710/registration",
     "user": {
       "name": "ssi",
       "type": "Local Investor",
       "economicZone": "Government Owned Economic Zone",
       "zoneName": "Shrihatta Economic Zone",
       "nationality": "Bangladeshi",
-      "idType": "National ID",
+      "idType": "Passport",
       "nationalId": "00000007757876",
+      "passportNo": "7757876",
       "dob": "June 3,",
       "designation": "owner",
       "country": "Bangladesh",
@@ -26,8 +25,7 @@
       "confirmPassword": "hphphp"
     },
     "files": {
-      "documentPath": "/home/shafin/Documents/practice/Automation/files/demo.pdf",
-      "imagePath": "/home/shafin/Documents/practice/Automation/files/demo.png"
+      "documentPath": "files/demo.pdf",
+      "imagePath": "files/demo.png"
     }
-  }
 }

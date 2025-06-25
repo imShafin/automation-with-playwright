@@ -4,13 +4,13 @@ import testdata from '../../fixtures/testdata.json';
 
 setup('login', async ({ page }) => {
   const loginPage = new LoginPage(page);
-  await loginPage.navigate(testdata["validUser"]["loginUrl"]);
+  await loginPage.navigate(process.env.BASE_URL! + '/login');
   await loginPage.login(
     testdata["validUser"]["email"], 
     testdata["validUser"]["password"]
   );
   
-  await page.waitForURL(testdata['baseurl']);
+  await page.waitForURL(process.env.BASE_URL!);
   await page.context().storageState({ path: 'fixtures/auth/auth.json' });
   await page.pause();
 });

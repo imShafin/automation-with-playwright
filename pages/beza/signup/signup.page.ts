@@ -11,6 +11,8 @@ export class SignUpPage extends BasePage {
     
     // Identity Information
     readonly nationalityDropdown: Locator;
+    readonly passportRadio: Locator;
+    readonly passportNoInput: Locator;
     readonly nationalIdRadio: Locator;
     readonly nationalIdInput: Locator;
     readonly dobInput: Locator;
@@ -64,6 +66,8 @@ export class SignUpPage extends BasePage {
         
         // Identity Information
         this.nationalityDropdown = page.getByText('Select your nationalityRemove');
+        this.passportRadio = page.getByRole('radio', { name: 'Password' });
+        this.passportNoInput = page.getByRole('textbox', { name: 'Passport No: *' });
         this.nationalIdRadio = page.getByRole('radio', { name: 'National ID' });
         this.nationalIdInput = page.getByRole('textbox', { name: 'National ID: *' });
         this.dobInput = page.getByRole('textbox', { name: 'Select your date of birth' });
@@ -132,16 +136,19 @@ export class SignUpPage extends BasePage {
     async fillIdentityInformation(data: {
         nationality: string;
         idType: string;
+        passportNo: string;
         nationalId: string;
         dob: string;
         designation: string;
     }) {
         await this.nationalityDropdown.click();
         await this.page.getByRole('option', { name: data.nationality }).click();
-        
+
         if (data.idType === 'National ID') {
             await this.nationalIdRadio.check();
             await this.nationalIdInput.fill(data.nationalId);
+        } else {
+            await this.passportNoInput.fill(data.passportNo);
         }
         
         await this.dobInput.click();
@@ -231,6 +238,7 @@ export class SignUpPage extends BasePage {
         await this.fillIdentityInformation({
             nationality: userData.nationality,
             idType: userData.idType,
+            passportNo: userData.passportNo,
             nationalId: userData.nationalId,
             dob: userData.dob,
             designation: userData.designation
@@ -261,3 +269,7 @@ export class SignUpPage extends BasePage {
         await this.submitRegistration();
     }
 }
+
+
+
+

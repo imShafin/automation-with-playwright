@@ -16,7 +16,5 @@ test.describe('LMS Creation Tests', () => {
             testdata['lmsCreation']['application'],
             testdata['lmsCreation']['files']
         );
-    
     });
-
 });

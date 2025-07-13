@@ -1,60 +1,21 @@
 [
-    {
-        "sopName": "Investment Clearance",
-        "processes": [
-            {
-                "companyName": "Arif and company",
-                "trackingId": "PC-000000000327",
-                "action": "FORWARD"
-            },
-            {
-                "companyName": "",
-                "trackingId": "PC-000000000327",
-                "action": "REJECT"
-            },
-            {
-                "companyName": "Arif and company",
-                "trackingId": "",
-                "action": "SHORTFALL"
-            }
-        ]
-    },
+    
     {
         "sopName": "Work Permit",
         "processes": [
             {
-                "companyName": "Arif and company",
-                "trackingId": "PC-000000000327",
+                "companyName": "",
+                "trackingId": "WP-000000000169",
                 "action": "FORWARD"
             },
             {
                 "companyName": "",
-                "trackingId": "PC-000000000327",
+                "trackingId": "WP-000000000190",
                 "action": "REJECT"
-            },
-            {
-                "companyName": "Arif and company",
-                "trackingId": "",
-                "action": "SHORTFALL"
-            }
-        ]
-    },
-    {
-        "sopName": "MoHA Security Clearance",
-        "processes": [
-            {
-                "companyName": "Arif and company",
-                "trackingId": "PC-000000000327",
-                "action": "FORWARD"
             },
             {
                 "companyName": "",
-                "trackingId": "PC-000000000327",
-                "action": "REJECT"
-            },
-            {
-                "companyName": "Arif and company",
-                "trackingId": "",
+                "trackingId": "WP-000000000134",
                 "action": "SHORTFALL"
             }
         ]

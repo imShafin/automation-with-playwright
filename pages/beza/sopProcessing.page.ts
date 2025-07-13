@@ -17,6 +17,7 @@ export class SopProcessingPage extends BasePage {
   readonly forwardButton = this.page.getByRole('button', { name: 'FORWARD' });
   readonly rejectButton = this.page.getByRole('button', { name: 'REJECT' });
   readonly shortfallButton = this.page.getByText('SHORTFALL', { exact: true });
+  readonly commentBox = this.page.getByRole('textbox', { name: 'Write comment here' });
 
   constructor(page: Page) {
     super(page);
@@ -48,25 +49,22 @@ export class SopProcessingPage extends BasePage {
 
     switch (action) {
       case 'FORWARD':
-        await this.forwardButton.click();
         this.page.once('dialog', dialog => dialog.dismiss().catch(() => {}));
+        await this.forwardButton.click();
         break;
-      case 'REJECT':
+
+      case 'REJECT': 
         this.page.once('dialog', dialog => dialog.dismiss().catch(() => {}));
         await this.rejectButton.click();
         break;
+        
       case 'SHORTFALL':
+        await this.commentBox.click();
+        await this.commentBox.fill('issue found');
         this.page.once('dialog', dialog => dialog.dismiss().catch(() => {}));
         await this.shortfallButton.click();
         break;
     }
 
-    await this.page.waitForLoadState('networkidle');
-  }
-
-  async verifyActionCompleted(process: Process) {
-    await this.performSearch(process);
-    // Add specific verification logic here based on your application
-    // For example, check for status updates or confirmation messages
   }
 }

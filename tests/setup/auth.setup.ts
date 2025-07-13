@@ -6,8 +6,8 @@ setup('login', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.navigate(process.env.BASE_URL! + '/login');
   await loginPage.login(
-    testdata["validUser"]["email"], 
-    testdata["validUser"]["password"]
+    testdata["dev_rd1"]["email"], 
+    testdata["dev_rd1"]["password"]
   );
   
   await page.waitForURL(process.env.BASE_URL!);

@@ -1,6 +1,6 @@
 import { test as setup, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/beza/login/login.page';
-import testdata from '../../fixtures/testdata.json';
+import testdata from '../../fixtures/dev.json';
 
 setup('login', async ({ page }) => {
   const loginPage = new LoginPage(page);
@@ -14,6 +14,3 @@ setup('login', async ({ page }) => {
   await page.context().storageState({ path: 'fixtures/auth/auth.json' });
   await page.pause();
 });
-
-
-

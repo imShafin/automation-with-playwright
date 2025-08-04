@@ -16,7 +16,7 @@ dotenv.config();
  */
 
 require('dotenv').config({
-  path: path.resolve(__dirname, `.env.${process.env.ENVIRONMENT || 'local'}`),
+  path: path.resolve(__dirname, 'env', `.env.${process.env.ENVIRONMENT || 'dev'}`),
 });
 
 export default defineConfig({
@@ -35,7 +35,10 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-
+    video: {
+      mode: 'on',
+      size: { width: 1280, height: 720 }  // Set video size for better visibility
+    },
     baseURL: process.env.BASE_URL,    
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

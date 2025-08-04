@@ -1,0 +1,18 @@
+{
+        "validUser": {
+            "email": "gl_rd1@newmail.com",
+            "password": "12345"
+        },
+        "dev_rd1": {
+            "email": "gl_rd1@newmail.com",
+            "password": "12345"
+        },
+        "dev_rd2": {
+            "email": "gl_bd_rd2@mail.com",
+            "password": "12345"
+        },
+        "dev_rd3": {
+            "email": "gl_rd3@mail.com",
+            "password": "12345"
+        }
+}

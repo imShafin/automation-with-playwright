@@ -33,6 +33,7 @@ export class LmsCreationPage extends BasePage {
     readonly landCoordinatesUpload: Locator;
     readonly fileInput: Locator;
     
+    
     // Terms and Submission
     readonly termsCheckbox: Locator;
     readonly submitButton: Locator;

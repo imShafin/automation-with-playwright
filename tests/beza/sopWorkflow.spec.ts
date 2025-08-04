@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { SopProcessingPage } from '../../pages/beza/sopProcessing.page';
+import { SopProcessingPage } from '../../pages/beza/home/sops/sopProcessing.page';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -7,7 +7,7 @@ import * as path from 'path';
 interface Process {
   companyName: string;
   trackingId: string;
-  action: 'FORWARD' | 'REJECT' | 'SHORTFALL';
+  action: 'FORWARD' | 'REJECT' | 'SHORTFALL'; 
 }
 
 interface SopTestData {
@@ -26,7 +26,7 @@ test.describe('SOP Processing Workflow', () => {
   });
 
   // Load test data
-  const testDataPath = path.join(__dirname, '../../fixtures/rd1_sop_flow.json');
+  const testDataPath = path.join(__dirname, '../../fixtures/sop_flow.json');
   const testData: SopTestData[] = JSON.parse(fs.readFileSync(testDataPath, 'utf-8'));
 
   // Process each SOP in the test data

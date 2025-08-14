@@ -1,31 +1,32 @@
-
-{
+[
+  {
     "user": {
-      "name": "ssi",
+      "name": "Fatima Begum",
       "type": "Local Investor",
       "economicZone": "Government Owned Economic Zone",
-      "zoneName": "Shrihatta Economic Zone",
+      "zoneName": "Jamalpur EZ",
       "nationality": "Bangladeshi",
       "idType": "Passport",
-      "nationalId": "00000007757876",
-      "passportNo": "7757876",
-      "dob": "June 3,",
-      "designation": "owner",
+      "nationalId": "200987654321",
+      "passportNo": "BD987654",
+      "dob": "22-Jul-1978",
+      "designation": "CEO",
       "country": "Bangladesh",
-      "division": "Rajshahi",
-      "district": "Pabna",
-      "address": "3ghjkjeyjh",
-      "phoneCountry": "(AFG)",
-      "mobileNumber": "0987654",
+      "division": "Dhaka",
+      "district": "Gazipur",
+      "address": "25 Textile Road",
+      "phoneCountry": "(BGD)",
+      "mobileNumber": "01987654321",
       "companyType": "Existing company",
-      "companyName": "shunni ltd",
+      "companyName": "Textile yyttyy Masters Ltd",
       "companyCountryName": "Bangladesh",
-      "email": "t@iayon.com",
-      "password": "hphphp",
-      "confirmPassword": "hphphp"
+      "email": "fatimaBeg5234@textilem.com",
+      "password": "textile456",
+      "confirmPassword": "textile456"
     },
     "files": {
       "documentPath": "files/demo.pdf",
       "imagePath": "files/demo.png"
     }
-}
+  }
+]

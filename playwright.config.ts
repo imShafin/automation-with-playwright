@@ -43,6 +43,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
+  outputDir: 'test-results/videos',
 
   /* Configure projects for major browsers */
   projects: [
@@ -62,7 +63,7 @@ export default defineConfig({
         viewport: { width: 1366, height: 768 },
         storageState: 'fixtures/auth/auth.json'
       },
-      dependencies: ['setup']
+      //dependencies: ['setup']
     },
 
     // Add additional browser configurations as needed

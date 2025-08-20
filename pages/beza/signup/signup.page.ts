@@ -1,6 +1,12 @@
 import { Page, Locator } from "@playwright/test";
 import { BasePage } from "../../base.page";
 
+async function fillDateField(page: Page, fieldName: string, value: string) {
+  const selector = `input[name="data[${fieldName}]"] + input[type="text"]`;
+  await page.locator(selector).fill(value);
+}
+
+
 export class SignUpPage extends BasePage {
     // Personal Information
     readonly nameInput: Locator;
@@ -70,7 +76,6 @@ export class SignUpPage extends BasePage {
         this.passportNoInput = page.getByRole('textbox', { name: 'Passport No: *' });
         this.nationalIdRadio = page.getByRole('radio', { name: 'National ID' });
         this.nationalIdInput = page.getByRole('textbox', { name: 'National ID: *' });
-        this.dobInput = page.getByRole('textbox', { name: 'Select your date of birth' });
         this.designationInput = page.getByRole('textbox', { name: 'Designation: *' });
         
         // Address Information
@@ -121,11 +126,14 @@ export class SignUpPage extends BasePage {
         zoneName: string;
         hasLandLease: boolean;
     }) {
+        await this.page.waitForTimeout(500); // Optional: small wait for stability
         await this.nameInput.fill(data.name);
         await this.typeDropdown.click();
+        await this.page.waitForTimeout(1000);
         await this.page.getByText(data.type).click();
         await this.economicZoneDropdown.click();
         await this.page.getByRole('option', { name: data.economicZone }).click();
+        await this.page.waitForTimeout(1000); // Optional: small wait for stability
         await this.zoneNameDropdown.click();
         await this.page.getByText(data.zoneName).click();
         if (data.hasLandLease) {
@@ -151,8 +159,8 @@ export class SignUpPage extends BasePage {
             await this.passportNoInput.fill(data.passportNo);
         }
         
-        await this.dobInput.click();
-        await this.page.getByLabel(data.dob).click();
+        await fillDateField(this.page, 'userDateOfBirth', data.dob);
+
         await this.designationInput.fill(data.designation);
     }
 
@@ -193,20 +201,22 @@ export class SignUpPage extends BasePage {
     }
 
     async uploadDocuments(documentPath: string, imagePath: string) {
-        await this.moaUpload.click();
-        await this.fileInput.setInputFiles(documentPath);
-        await this.landLeaseUpload.click();
-        await this.fileInput.setInputFiles(documentPath);
-        await this.aoaUpload.click();
-        await this.fileInput.setInputFiles(documentPath);
-        await this.formXiiUpload.click();
-        await this.fileInput.setInputFiles(documentPath);
-        await this.authLetterUpload.click();
-        await this.fileInput.setInputFiles(documentPath);
-        await this.idUpload.click();
-        await this.fileInput.setInputFiles(documentPath);
-        await this.photoUpload.click();
-        await this.fileInput.setInputFiles(imagePath);
+        const upload = async (locator: Locator, filePath: string) => {
+            const [fileChooser] = await Promise.all([
+                this.page.waitForEvent('filechooser'),
+                locator.click()
+            ]);
+            await fileChooser.setFiles(filePath);
+            await this.page.waitForTimeout(300); // Optional: small wait for stability
+        };
+
+        await upload(this.moaUpload, documentPath);
+        await upload(this.landLeaseUpload, documentPath);
+        await upload(this.aoaUpload, documentPath);
+        await upload(this.formXiiUpload, documentPath);
+        await upload(this.authLetterUpload, documentPath);
+        await upload(this.idUpload, documentPath);
+        await upload(this.photoUpload, imagePath);
     }
 
     async fillAccountInformation(data: {

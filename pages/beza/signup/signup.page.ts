@@ -13,7 +13,7 @@ export class SignUpPage extends BasePage {
     readonly typeDropdown: Locator;
     readonly economicZoneDropdown: Locator;
     readonly zoneNameDropdown: Locator;
-    readonly landLeaseCheckbox: Locator;
+    //readonly landLeaseCheckbox: Locator;
     
     // Identity Information
     readonly nationalityDropdown: Locator;
@@ -68,7 +68,7 @@ export class SignUpPage extends BasePage {
         this.typeDropdown = page.getByText('Enter your typeRemove item');
         this.economicZoneDropdown = page.getByText('Select your economic zoneRemove item');
         this.zoneNameDropdown = page.getByText('Select zone nameSelect zone');
-        this.landLeaseCheckbox = page.getByRole('checkbox', { name: 'Does have Land Lease Agreement' });
+        //this.landLeaseCheckbox = page.getByRole('checkbox', { name: 'Does have Land Lease Agreement' });
         
         // Identity Information
         this.nationalityDropdown = page.getByText('Select your nationalityRemove');
@@ -136,9 +136,9 @@ export class SignUpPage extends BasePage {
         await this.page.waitForTimeout(1000); // Optional: small wait for stability
         await this.zoneNameDropdown.click();
         await this.page.getByText(data.zoneName).click();
-        if (data.hasLandLease) {
-            await this.landLeaseCheckbox.check();
-        }
+        // if (data.hasLandLease) {
+        //     await this.landLeaseCheckbox.check();
+        // }
     }
 
     async fillIdentityInformation(data: {

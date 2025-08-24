@@ -20,7 +20,7 @@
       "companyType": "Existing company",
       "companyName": "Textile yyttyy Masters Ltd",
       "companyCountryName": "Bangladesh",
-      "email": "fatimaBeg5234@textilem.com",
+      "email": "fatimaBeg500234@textilem.com",
       "password": "textile456",
       "confirmPassword": "textile456"
     },
@@ -28,5 +28,35 @@
       "documentPath": "files/demo.pdf",
       "imagePath": "files/demo.png"
     }
-  }
+  },
+      {
+      "user": {
+        "name": "Peter Norton",
+        "type": "Local Investor",
+        "economicZone": "Government Owned Economic Zone",
+        "zoneName": "Feni Economic Zone",
+        "nationality": "Bangladeshi",
+        "idType": "Passport",
+        "nationalId": "200987654321",
+        "passportNo": "BD987654",
+        "dob": "22-Jul-1978",
+        "designation": "CEO",
+        "country": "Bangladesh",
+        "division": "Dhaka",
+        "district": "Gazipur",
+        "address": "25 Textile Road",
+        "phoneCountry": "(BGD)",
+        "mobileNumber": "01987654321",
+        "companyType": "Existing company",
+        "companyName": "Khan Textile Ltd",
+        "companyCountryName": "Bangladesh",
+        "email": "khan123@textilem.com",
+        "password": "123456",
+        "confirmPassword": "123456"
+      },
+      "files": {
+        "documentPath": "files/demo.pdf",
+        "imagePath": "files/demo.png"
+      }
+    }
 ]

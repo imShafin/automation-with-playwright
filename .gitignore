@@ -5,7 +5,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/fixtures/auth/
 .env
 /tests/lecturer_ict.spec.ts 
 convert_json_to_excel.py 
